@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquete</title>  
+    <style type="text/css">
+         .circle{
+            display: flex;
+            background-color: orange;
+            color: darkslategray;
+            border-radius: 50%;
+            padding: 5px;
+            height: 350px;
+            width: 380px;
+            text-align: center;
+            align-items: center;
+            font-size: 35px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: auto;
+         }
+         .sim{
+             background-color:green ;
+             cursor: pointer;
+             left: 500px;
+             bottom: -50px;
+             padding: 10px 25px;
+             border: 5px;
+             border-color: black;
+             border-radius: 15%;
+            
+          
+         }
+          .sim:hover{
+            background-color: #3e8e41
+            
+        }
+        .sim:active{
+            background-color: #362607;
+            transform: translateY(4px);
+    }
+         .nao{
+             background-color: red;
+             cursor: pointer;
+             left: 500px;
+             bottom: -50px;
+             padding: 10px 25px;
+             border: 5px;
+             border-color: black;
+             border-radius: 15%;
+             
+          
+         }
+         .nao:hover{
+             background-color: #a00000 
+            
+        }
+        .nao:active{
+            background-color: #362607;
+            transform: translateY(4px);
+    }
+         .botao{
+             display: flex;
+             padding: 8px;
+             align-items: center;
+             justify-content: center;
+         }      
+
+         .result {
+             position: relative;
+             bottom: -80px;
+             left: 620px;
+             font-size: 20px;
+             font-family: 'Times New Roman', Times, serif;
+             color: green;
+
+         }
+         #infSim{
+               width: 20px;
+               background-color: #ff7675; 
+            }
+            #infNao{
+               width: 20px;
+               background-color: #fdcb6e; 
+            }
+    </style>
+</head>
+<body>
+    <div class="circle"> Você é a favor do lockdown, em cidades com situação de colapso no sistema de saúde ?</div>
+    <div class="botao">
+        <button type="button"  class="sim" onclick="resultSim()"> SIM </button>
+        <button type="button"  class="nao" onclick="resultNao()"> NÃO </button>
+    </div>
+    <div class="result"><b> Resultado </b> </div>
+   <div class="result" id="sim"> <b>SIM</b> </div>
+    <div class="result" id="infSim">0</div>
+    <div class="result" id="nao"> <b>NÃO</b> </div>
+    <div class="result" id="infNao">0</div>   
+ 
+    <script src="script.js"></script>
+</body>
+</html>
